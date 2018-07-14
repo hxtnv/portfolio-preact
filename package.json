@@ -5,7 +5,8 @@
   "dependencies": {
     "@just-boris/preact-scripts": "1.1.4",
     "preact": "^8.2.9",
-    "preact-compat": "^3.18.0"
+    "preact-compat": "^3.18.0",
+    "react-particles": "0.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

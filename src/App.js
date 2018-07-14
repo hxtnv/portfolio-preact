@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import Background from './components/Background';
 
 class App extends Component {
   render() {
@@ -10,6 +11,8 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+
+        <Background />
       </div>
     );
   }

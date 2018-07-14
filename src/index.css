@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-body {
+html {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
-  background: linear-gradient(to bottom left, #12082A, #12082D);
+  background: radial-gradient(to bottom left, #1B2735 0%, #090A0F 100%);
   color: #fff;
 }
