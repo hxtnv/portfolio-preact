@@ -1,47 +1,67 @@
-section.home {
-  padding: 0 80px;
-  margin: 20% 0 0;
+section.portfolio div.line {
+  width: 100px;
+  float: left;
+  margin: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
-section.home h1,
-section.home h2 {
-  font-family: 'Muli', sans-serif;
-  font-weight: 300;
+section.portfolio .element {
+  width: 50%;
+  float: left;
+  margin: 20px 0;
+}
+
+section.portfolio .element img {
+  height: 200px;
+  float: left;
+}
+
+section.portfolio .element div.text {
+  float: left;
+  height: 200px;
+  padding: 0 0 0 20px;
+  position: relative;
+}
+
+section.portfolio .element div.text p {
   margin: 0;
 }
 
-section.home h1 {
-  font-size: 2.5em;
+section.portfolio .element div.text p.title {
+  font-size: 24px;
 }
 
-section.home h2 {
-  font-size: 1.5em;
-  margin: 0 0 20px;
+section.portfolio .element div.text p.subtext {
+  opacity: .7;
 }
 
-section.home p {
-  opacity: .8;
-  margin: 0 0 5px;
-}
-
-section.home a.btn-outline {
-  margin: 20px 35px 0 0;
+section.portfolio .element div.text a {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  min-width: 175px;
 }
 
 @media (max-width: 768px) {
-  section.home {
-    padding: 10px;
+  section.portfolio .element {
+    width: 100%;
+    margin: 0 0 60px;
   }
 
-  section.home a.btn-outline {
-    margin: 20px 0;
-    padding: 7px 0;
-    width: calc(50% - 10px);
-    display: block;
-    float: left;
+  section.portfolio .element img {
+    max-width: 100%;
   }
 
-  section.home a.btn-outline:nth-child(odd) {
-    margin-right: 10px;
+  section.portfolio .element div.text {
+    height: auto;
+    width: 100%;
+    padding: 10px 0 0;
+  }
+
+  section.portfolio .element div.text a {
+    position: initial;
+    width: calc(100% - 60px);
+    margin: 10px 0 0;
+    min-width: unset;
   }
 }
