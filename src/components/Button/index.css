@@ -5,6 +5,7 @@ a.btn-outline {
   text-decoration: none;
   font-family: 'Muli', sans-serif;
   display: inline-block;
+  font-size: 18px;
 }
 
 a.btn-outline:hover,
