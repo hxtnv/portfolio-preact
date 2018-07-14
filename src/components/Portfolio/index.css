@@ -1,8 +1,21 @@
 section.home {
+  padding: 0 80px;
   margin: 20% 0 0;
 }
 
+section.home h1,
 section.home h2 {
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+section.home h1 {
+  font-size: 2.5em;
+}
+
+section.home h2 {
+  font-size: 1.5em;
   margin: 0 0 20px;
 }
 
@@ -16,6 +29,10 @@ section.home a.btn-outline {
 }
 
 @media (max-width: 768px) {
+  section.home {
+    padding: 10px;
+  }
+
   section.home a.btn-outline {
     margin: 20px 0;
     padding: 7px 0;
