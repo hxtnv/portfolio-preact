@@ -6,6 +6,7 @@ a.btn-outline {
   font-family: 'Muli', sans-serif;
   display: inline-block;
   font-size: 18px;
+  text-align: center;
 }
 
 a.btn-outline:hover,

@@ -27,3 +27,21 @@ section.home p {
 section.home a.btn-outline {
   margin: 20px 35px 0 0;
 }
+
+@media (max-width: 768px) {
+  section.home {
+    padding: 10px;
+  }
+
+  section.home a.btn-outline {
+    margin: 20px 0;
+    padding: 7px 0;
+    width: calc(50% - 10px);
+    display: block;
+    float: left;
+  }
+
+  section.home a.btn-outline:nth-child(odd) {
+    margin-right: 10px;
+  }
+}
