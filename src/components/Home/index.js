@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import Button from './../Button';
 import './index.css';
 
 class Home extends Component {
@@ -10,6 +11,9 @@ class Home extends Component {
 
         <p>Tworzę zaawansowane i eleganckie interfejsy z użyciem najnowszych technologii.</p>
         <p>Twoje zadowolenie jako klienta jest dla mnie <strong>najważniejsze</strong>.</p>
+
+        <Button to="/kontakt">Kontakt</Button>
+        <Button to="/portfolio">Portfolio</Button>
       </section>
     );
   }

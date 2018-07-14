@@ -23,3 +23,7 @@ section.home p {
   opacity: .8;
   margin: 0 0 5px;
 }
+
+section.home a.btn-outline {
+  margin: 20px 35px 0 0;
+}

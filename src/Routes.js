@@ -1,24 +1,18 @@
 import { h, Component } from 'preact';
-import Router from 'preact-router';
-import AsyncRoute from 'preact-async-route';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import Home from './components/Home';
 
 class Routes extends Component {
   render() {
     return (
-      <Router>
-        <Home path="/" />
-        <AsyncRoute
-          path="/friends"
-          getComponent={ () => import('./components/Home').then(module => module.default) }
-        />
-        <AsyncRoute
-          path="/friends/:id"
-          getComponent={ () => import('./components/Home').then(module => module.default) }
-          loading={ () => <div>loading...</div> }
-        />
-      </Router>
+      <BrowserRouter>
+        <div>
+          <Route exact path="/" render={() => <Home />} />
+          <Route path="/portfolio" render={() => <p>portfolio here</p>} />
+          <Route path="/kontakt" render={() => <p>kontakt</p>} />
+        </div>
+      </BrowserRouter>
     );
   }
 }

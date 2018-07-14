@@ -1,0 +1,15 @@
+a.btn-outline {
+  padding: 7px 30px;
+  border: 1px solid rgba(255, 255, 255, .7);
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Muli', sans-serif;
+  display: inline-block;
+}
+
+a.btn-outline:hover,
+a.btn-outline:active,
+a.btn-outline:focus {
+  background: rgba(255, 255, 255, .8);
+  color: #000;
+}
