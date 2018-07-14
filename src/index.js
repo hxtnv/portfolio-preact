@@ -1,12 +1,9 @@
 import { h, render } from 'preact';
-import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+import Routes from './Routes';
 
+import './index.css';
 
-
-
-
-render(<App />, document.getElementById('root'));
+render(<Routes />, document.getElementById('root'));
 registerServiceWorker();

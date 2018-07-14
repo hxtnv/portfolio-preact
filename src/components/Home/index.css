@@ -1,0 +1,25 @@
+section.home {
+  padding: 0 80px;
+  margin: 20% 0 0;
+}
+
+section.home h1,
+section.home h2 {
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+section.home h1 {
+  font-size: 2.5em;
+}
+
+section.home h2 {
+  font-size: 1.5em;
+  margin: 0 0 20px;
+}
+
+section.home p {
+  opacity: .8;
+  margin: 0 0 5px;
+}

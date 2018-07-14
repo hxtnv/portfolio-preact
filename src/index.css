@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Muli:300');
 
 html {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
-  background: radial-gradient(to bottom left, #1B2735 0%, #090A0F 100%);
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to bottom left, #12082A, #12082D);
   color: #fff;
 }
