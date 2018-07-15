@@ -1,79 +1,71 @@
-section.portfolio div.line {
-  width: 100px;
-  float: left;
-  margin: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, .1);
-}
-
-section.portfolio .element {
+section.contact .holder {
   width: 50%;
   float: left;
-  margin: 20px 0;
 }
 
-section.portfolio .element img {
-  height: 200px;
+section.contact .form-50 {
+  width: calc(50% - 50px);
   float: left;
+  padding: 0 50px 0 0;
 }
 
-section.portfolio .element div.text {
-  float: left;
-  height: 200px;
-  padding: 0 0 0 20px;
-  position: relative;
-}
-
-section.portfolio .element div.text p {
-  margin: 0;
-}
-
-section.portfolio .element div.text p.title {
-  font-size: 24px;
-}
-
-section.portfolio .element div.text p.subtext {
-  opacity: .7;
-}
-
-section.portfolio .element div.text a {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  min-width: 175px;
-}
-
-section.portfolio div.contact {
+section.contact .form-100 {
   width: 100%;
   float: left;
-  text-align: center;
-  margin: 30px 0 0;
+}
+
+section.contact input[type="text"],
+section.contact input[type="email"],
+section.contact textarea {
+  border: 1px solid rgba(255, 255, 255, .2);
+  background: transparent;
+  outline: 0;
+  padding: 10px;
+  color: #fff;
+}
+
+section.contact input[type="text"],
+section.contact input[type="email"] {
+  width: 100%;
+  margin: 0 0 20px;
+}
+
+section.contact textarea {
+  width: calc(100% - 50px);
+  min-height: 180px;
+  resize: vertical;
+}
+
+section.contact label {
+  font-size: 14px;
+}
+
+section.contact label:after {
+  content: ' *';
+  color: #ff0000;
+  font-size: 11px;
+}
+
+section.contact input[type="submit"] {
+  font-size: 14px;
+  margin: 20px 0 0;
 }
 
 @media (max-width: 768px) {
-  section.portfolio .element {
+  section.contact .form-50,
+  section.contact .holder,
+  section.contact textarea,
+  section.contact input[type="submit"] {
     width: 100%;
-    margin: 0 0 60px;
   }
 
-  section.portfolio .element img {
-    max-width: 100%;
+  section.contact .form-50 {
+    padding: 0;
   }
 
-  section.portfolio .element div.text {
-    height: auto;
-    width: 100%;
-    padding: 10px 0 0;
-  }
-
-  section.portfolio .element div.text a {
-    position: initial;
-    width: calc(100% - 60px);
-    margin: 10px 0 0;
-    min-width: unset;
-  }
-
-  section.portfolio div.contact a {
-    width: calc(100% - 60px);
-    margin: 0 0 10px;
+  section.contact input[type="text"],
+  section.contact input[type="email"],
+  section.contact textarea {
+    width: calc(100% - 20px);
   }
 }
