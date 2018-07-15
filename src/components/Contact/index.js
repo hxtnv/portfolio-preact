@@ -20,21 +20,33 @@ class Contact extends Component {
 
     if(!this.state.name || !this.state.email || !this.state.message) return;
 
+    let _state = this.state;
+
     fetch('https://wygonski.eu/send.php', {
       method: 'post',
-      body: JSON.stringify(this.state)
-    }).then((response) => {
-      return response.json();
-    }).then((data) => {
-      if(data.success) {
-        this.setState({returnMsg: {color: '#5cb85c', msg: 'Wiadomość wysłana - otrzymasz odpowiedź najszybciej jak to możliwe!'}});
-      }else {
+      body: `name=${_state.name}&email=${_state.email}&message=${_state.message}`,
+      headers: new Headers({
+        'Content-Type': 'application/x-www-form-urlencoded'
+      })
+    }).then(response => {
+      console.log(response);
+
+
+      response.json().then((data) => {
+        console.log(data);
+        if(data.success) {
+          this.setState({returnMsg: {color: '#5cb85c', msg: 'Wiadomość wysłana - otrzymasz odpowiedź najszybciej jak to możliwe!'}});
+        }else {
+          this.setState({returnMsg: {color: '#d9534f', msg: 'Nie udało się wysłać wiadomości - spróbuj ponownie.'}});
+        }
+      }).catch(e => {
+        console.log(e);
         this.setState({returnMsg: {color: '#d9534f', msg: 'Nie udało się wysłać wiadomości - spróbuj ponownie.'}});
-      }
-    }).catch((e) => {
+      });
+    }).catch(e => {
       console.log(e);
       this.setState({returnMsg: {color: '#d9534f', msg: 'Nie udało się wysłać wiadomości - spróbuj ponownie.'}});
-    })
+    });
   }
 
   render() {
