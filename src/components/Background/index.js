@@ -1,5 +1,4 @@
 import { h, Component } from 'preact';
-import { Link } from 'react-router-dom';
 import './index.css';
 
 class Background extends Component {
