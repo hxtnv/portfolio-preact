@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import Button from './../Button';
+import HomeButton from './../HomeButton';
 import './index.css';
 
 import radium from '../../resources/radium.png';
@@ -32,6 +33,8 @@ class Portfolio extends Component {
   render() {
     return (
       <section className="portfolio">
+        <HomeButton />
+
         <h2>Sprawdź moje poprzednie prace:</h2>
 
         <div className="line"></div>
