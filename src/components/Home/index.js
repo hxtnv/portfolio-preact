@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import Button from './../Button';
+import Background from './../Background';
 import './index.css';
 
 class Home extends Component {
@@ -14,6 +15,8 @@ class Home extends Component {
 
         <Button to="/kontakt">Kontakt</Button>
         <Button to="/portfolio">Portfolio</Button>
+
+        <Background />
       </section>
     );
   }
