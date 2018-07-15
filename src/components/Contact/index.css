@@ -48,7 +48,7 @@ section.contact label:after {
 
 section.contact input[type="submit"] {
   font-size: 14px;
-  margin: 20px 0 0;
+  margin: 10px 0 0;
 }
 
 @media (max-width: 768px) {
