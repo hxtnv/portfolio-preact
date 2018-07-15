@@ -29,6 +29,10 @@ h2 {
   font-size: 1.5em;
 }
 
+p.text-muted {
+	opacity: .8;
+}
+
 @media (max-width: 768px) {
   section {
     padding: 10px;

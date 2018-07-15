@@ -1,0 +1,79 @@
+section.portfolio div.line {
+  width: 100px;
+  float: left;
+  margin: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+section.portfolio .element {
+  width: 50%;
+  float: left;
+  margin: 20px 0;
+}
+
+section.portfolio .element img {
+  height: 200px;
+  float: left;
+}
+
+section.portfolio .element div.text {
+  float: left;
+  height: 200px;
+  padding: 0 0 0 20px;
+  position: relative;
+}
+
+section.portfolio .element div.text p {
+  margin: 0;
+}
+
+section.portfolio .element div.text p.title {
+  font-size: 24px;
+}
+
+section.portfolio .element div.text p.subtext {
+  opacity: .7;
+}
+
+section.portfolio .element div.text a {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  min-width: 175px;
+}
+
+section.portfolio div.contact {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin: 30px 0 0;
+}
+
+@media (max-width: 768px) {
+  section.portfolio .element {
+    width: 100%;
+    margin: 0 0 60px;
+  }
+
+  section.portfolio .element img {
+    max-width: 100%;
+  }
+
+  section.portfolio .element div.text {
+    height: auto;
+    width: 100%;
+    padding: 10px 0 0;
+  }
+
+  section.portfolio .element div.text a {
+    position: initial;
+    width: calc(100% - 60px);
+    margin: 10px 0 0;
+    min-width: unset;
+  }
+
+  section.portfolio div.contact a {
+    width: calc(100% - 60px);
+    margin: 0 0 10px;
+  }
+}
