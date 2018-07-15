@@ -73,6 +73,10 @@ class Portfolio extends Component {
             link="http://esportpoints.com"
             date="Marzec, 2017" />
         </div>
+
+        <div className="contact">
+          <Button to="/kontakt">Kontakt</Button>
+        </div>
       </section>
     );
   }
