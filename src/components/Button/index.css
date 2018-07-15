@@ -1,4 +1,4 @@
-a.btn-outline {
+.btn-outline {
   padding: 7px 30px;
   border: 1px solid rgba(255, 255, 255, .7);
   color: #fff;
@@ -7,11 +7,13 @@ a.btn-outline {
   display: inline-block;
   font-size: 18px;
   text-align: center;
+  background: transparent;
 }
 
-a.btn-outline:hover,
-a.btn-outline:active,
-a.btn-outline:focus {
+.btn-outline:hover,
+.btn-outline:active,
+.btn-outline:focus {
   background: rgba(255, 255, 255, .8);
   color: #000;
+  cursor: pointer;
 }
