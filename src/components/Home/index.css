@@ -10,8 +10,28 @@ section.home p {
   margin: 0 0 5px;
 }
 
+section.home p.text-more {
+  margin: 15px 0 0;
+  transition: all 1s;
+}
+
+section.home p.text-more.hidden {
+  opacity: 0;
+}
+
 section.home a.btn-outline {
-  margin: 20px 35px 0 0;
+  margin: 20px 15px 0 0;
+}
+
+section.home p a.toggle-more {
+  margin: 0 0 0 5px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+section.home p a.toggle-more:hover {
+  cursor: pointer;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
