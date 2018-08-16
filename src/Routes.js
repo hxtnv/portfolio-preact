@@ -1,19 +1,43 @@
 import { h, Component } from 'preact';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Home from './components/Home';
 import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 
+import _store from './services/store';
+import translation from './translation';
+
 class Routes extends Component {
+  constructor(props) {
+    super(props);
+
+    this.updateLanguage = this.updateLanguage.bind(this);
+  }
+
+  updateLanguage() {
+    // it's a bit hacky way, we use it
+    // because react-easy-state isn't
+    // fully compatible with preact
+    document.title = translation[_store.language].doc_title;
+    
+    this.forceUpdate();
+  }
+
+  componentWillMount() {
+    document.title = translation[_store.language].doc_title;
+
+    _store.updateLanguage = this.updateLanguage;
+  }
+
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/kontakt" component={Contact} />
-        </div>
+        </Switch>
       </BrowserRouter>
     );
   }

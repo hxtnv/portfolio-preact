@@ -1,7 +1,12 @@
 import { h, Component } from 'preact';
+
 import Button from './../Button';
 import Background from './../Background';
 import Languages from './../Languages';
+
+import _store from '../../services/store';
+import translation from '../../translation';
+
 import './index.css';
 
 class Home extends Component {
@@ -27,22 +32,21 @@ class Home extends Component {
         <h1>Daniel Wygoński</h1>
         <h2>UI / UX Designer, Web Developer</h2>
 
-        <p className="text-muted">Tworzę zaawansowane i eleganckie interfejsy z użyciem najnowszych technologii.</p>
+        <p className="text-muted">{translation[_store.language].home_desc1}</p>
         <p className="text-muted">
-          Twoje zadowolenie jako klienta jest dla mnie <strong>najważniejsze</strong>. 
+          <span dangerouslySetInnerHTML={{__html: translation[_store.language].home_desc2}}></span>
+
           <a className="toggle-more" role="button" onClick={() => this.toggleMore()}>
-            {!this.state.more ? 'Czytaj więcej...' : 'Schowaj tekst...'}
+            {!this.state.more ? translation[_store.language].home_read_more : translation[_store.language].home_hide_text}
           </a>
 
           <p className={`text-more ${!this.state.more ? 'hidden' : ''}`}>
-            {this.state.more ? (
-              'Posiadam wieloletnie doświadczenie z technologiami www (HTML, CSS, JS, PHP, Node), frameworkami typu React i Inferno a także systemy CMS typu Wordpress.'
-            ) : '.'}
+            {this.state.more ? <span dangerouslySetInnerHTML={{__html: translation[_store.language].home_spec}}></span> : '.'}
           </p>
         </p>
 
-        <Button to="/kontakt">Kontakt</Button>
-        <Button to="/portfolio">Portfolio</Button>
+        <Button to="/kontakt">{translation[_store.language].contact}</Button>
+        <Button to="/portfolio">{translation[_store.language].portfolio}</Button>
 
         <Background />
       </section>
@@ -51,3 +55,4 @@ class Home extends Component {
 }
 
 export default Home;
+// export default view(Home);

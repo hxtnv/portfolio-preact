@@ -1,6 +1,11 @@
 import { h, Component } from 'preact';
+
 import Button from './../Button';
 import HomeButton from './../HomeButton';
+
+import _store from '../../services/store';
+import translation from '../../translation';
+
 import './index.css';
 
 import radium from '../../resources/radium.png';
@@ -22,7 +27,7 @@ class Element extends Component {
           <p className="title">{this.props.title}</p>
           <p className="subtext">{this.props.date}</p>
 
-          <Button to={this.props.link} external>Zobacz online</Button>
+          <Button to={this.props.link} external>{translation[_store.language].portfolio_see_online}</Button>
         </div>
       </div>
     );
@@ -35,7 +40,7 @@ class Portfolio extends Component {
       <section className="portfolio">
         <HomeButton />
 
-        <h2>Sprawdź moje poprzednie prace:</h2>
+        <h2>{translation[_store.language].portfolio_prev}</h2>
 
         <div className="line"></div>
 
@@ -44,41 +49,41 @@ class Portfolio extends Component {
             title="Radium League Client"
             image={radium}
             link="http://radium.elhs.co"
-            date="Czerwiec, 2018" />
+            date={`${translation[_store.language].months.jun}, 2018`} />
 
           <Element
             title="venus.gg"
             image={venus}
             link="https://www.behance.net/gallery/62234093/venusgg-esport-bets"
-            date="Luty, 2018" />
+            date={`${translation[_store.language].months.feb}, 2018`} />
 
           <Element
             title="TagAnimationz Portfolio"
             image={tag}
             link="https://www.behance.net/gallery/62558235/TagAnimationzcom"
-            date="Luty, 2018" />
+            date={`${translation[_store.language].months.feb}, 2018`} />
 
           <Element
             title="Akademia Programowania"
             image={codeit}
             link="http://codeit.edu.pl"
-            date="Kwiecień, 2018" />
+            date={`${translation[_store.language].months.apr}, 2018`} />
 
           <Element
             title="dota2auctions.com"
             image={dota2}
             link="http://dota2auctions.com"
-            date="Styczeń, 2018" />
+            date={`${translation[_store.language].months.jan}, 2018`} />
 
           <Element
             title="esportpoints.com"
             image={esp}
             link="http://esportpoints.com"
-            date="Marzec, 2017" />
+            date={`${translation[_store.language].months.mar}, 2017`} />
         </div>
 
         <div className="contact">
-          <Button to="/kontakt">Kontakt</Button>
+          <Button to="/kontakt">{translation[_store.language].contact}</Button>
         </div>
       </section>
     );

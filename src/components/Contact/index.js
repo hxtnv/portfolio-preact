@@ -1,5 +1,10 @@
 import { h, Component } from 'preact';
+
 import HomeButton from './../HomeButton';
+
+import _store from '../../services/store';
+import translation from '../../translation';
+
 import './index.css';
 
 class Contact extends Component {
@@ -35,17 +40,17 @@ class Contact extends Component {
       response.json().then((data) => {
         console.log(data);
         if(data.success) {
-          this.setState({returnMsg: {color: '#5cb85c', msg: 'Wiadomość wysłana - otrzymasz odpowiedź najszybciej jak to możliwe!'}});
+          this.setState({returnMsg: {color: '#5cb85c', msg: translation[_store.language].contact_msg_sent_success}});
         }else {
-          this.setState({returnMsg: {color: '#d9534f', msg: 'Nie udało się wysłać wiadomości - spróbuj ponownie.'}});
+          this.setState({returnMsg: {color: '#d9534f', msg: translation[_store.language].contact_msg_sent_error}});
         }
       }).catch(e => {
         console.log(e);
-        this.setState({returnMsg: {color: '#d9534f', msg: 'Nie udało się wysłać wiadomości - spróbuj ponownie.'}});
+        this.setState({returnMsg: {color: '#d9534f', msg: translation[_store.language].contact_msg_sent_error}});
       });
     }).catch(e => {
       console.log(e);
-      this.setState({returnMsg: {color: '#d9534f', msg: 'Nie udało się wysłać wiadomości - spróbuj ponownie.'}});
+      this.setState({returnMsg: {color: '#d9534f', msg: translation[_store.language].contact_msg_sent_error}});
     });
   }
 
@@ -54,33 +59,33 @@ class Contact extends Component {
       <section className="contact">
         <HomeButton />
 
-        <h2>Skontaktuj się ze mna:</h2>
+        <h2>{translation[_store.language].contact_header}</h2>
 
         <div className="line"></div>
 
         <div style={{width: '100%', float: 'left'}}></div>
 
         <div className="holder">
-          <p className="text-muted">Wiadomość zwrotna przyjdzie na email który podasz w formularzu, dlatego upewnij się że jest poprawny.</p>
+          <p className="text-muted">{translation[_store.language].contact_email_fix}</p>
           
           <form onSubmit={this.sendMessage}>
             <div className="form-50">
-              <label>Imię i nazwisko:</label>
-              <input type="text" placeholder="Jan Kowalski" onChange={(e) => this.setState({name: e.target.value})} required />
+              <label>{translation[_store.language].contact_full_name}</label>
+              <input type="text" placeholder={translation[_store.language].contact_full_name_example} onChange={(e) => this.setState({name: e.target.value})} required />
             </div>
 
             <div className="form-50">
-              <label>Email:</label>
-              <input type="email" placeholder="przykladowy@email.net" onChange={(e) => this.setState({email: e.target.value})} required />
+              <label>{translation[_store.language].contact_email}</label>
+              <input type="email" placeholder={translation[_store.language].contact_email_example} onChange={(e) => this.setState({email: e.target.value})} required />
             </div>
 
             <div className="form-100">
-              <label>Wiadomość:</label>
+              <label>{translation[_store.language].contact_message}</label>
               <textarea id="message" onChange={(e) => this.setState({message: e.target.value})} required></textarea>
 
               <p style={{color: this.state.returnMsg.color, margin: '0', minHeight: '22px'}}>{this.state.returnMsg.msg}</p>
 
-              <input type="submit" value="Wyślij wiadomość" className="btn-outline" />
+              <input type="submit" value={translation[_store.language].contact_send_message} className="btn-outline" />
             </div>
           </form>
         </div>

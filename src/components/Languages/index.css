@@ -30,3 +30,11 @@
 .flag.flag-us {
   background-position: -32px -32px !important;
 }
+
+
+@media (max-width: 768px) {
+  .language-list {
+    top: 20px;
+    left: 10px;
+  }
+}
