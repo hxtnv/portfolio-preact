@@ -48,7 +48,7 @@ module.exports = {
     home_desc2: 'Your satisfaction as a client is for me <strong>the most important</strong> thing.',
     home_read_more: 'Read more...',
     home_hide_text: 'Hide text...',
-    home_spec: 'I have years of experience with www technologies (HTML, CSS, JS, PHP, Node), frameworks like <strong>React</strong> or <strong>Inferno</strong> and content management systems like <strong>Wordpress</strong>.',
+    home_spec: 'I have years of experience with web technologies (HTML, CSS, JS, PHP, Node), frameworks like <strong>React</strong> or <strong>Inferno</strong> and content management systems like <strong>Wordpress</strong>.',
     contact: 'Contact',
     portfolio: 'Portfolio',
 
