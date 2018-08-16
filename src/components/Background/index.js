@@ -1,5 +1,5 @@
 import { h, Component } from 'preact';
-import './index.css';
+// import './index.css'; // we lazy-load that in public/index.html
 
 class Background extends Component {
   render() {

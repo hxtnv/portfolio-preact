@@ -68,6 +68,13 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-113923247-1');
+
+      // lazy load stars background
+      var l = document.createElement('link');
+      l.rel = 'stylesheet';
+      l.href = 'stars.css';
+      var h = document.getElementsByTagName('head')[0];
+      h.parentNode.insertBefore(l, h);
     </script>
   </body>
 </html>
