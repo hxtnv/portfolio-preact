@@ -1,13 +1,14 @@
 import { h, Component } from 'preact';
 
-import Button from './../Button';
 import HomeButton from './../HomeButton';
+import Button from './../Button';
 
 import _store from '../../services/store';
 import translation from '../../translation';
 
 import './index.css';
 
+import mcu from '../../resources/mcu.jpg';
 import radium from '../../resources/radium.png';
 import tag from '../../resources/tag.jpg';
 import venus from '../../resources/venusgg.jpg';
@@ -19,15 +20,22 @@ class Element extends Component {
   render() {
     return (
       <div className="element">
-        <a href={this.props.link} target="_blank">
-          <img src={this.props.image} alt={this.props.title} />
-        </a>
+        <div className="img">
+          <a href={this.props.link} target="_blank">
+            <img src={this.props.image} alt={this.props.title} />
+          </a>
+        </div>
 
         <div className="text">
           <p className="title">{this.props.title}</p>
           <p className="subtext">{this.props.date}</p>
 
-          <Button to={this.props.link} external>{translation[_store.language].portfolio_see_online}</Button>
+          <a href={this.props.link} target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          </a>
         </div>
       </div>
     );
@@ -45,6 +53,12 @@ class Portfolio extends Component {
         <div className="line"></div>
 
         <div style={{width: '100%', float: 'left'}}>
+          <Element
+            title="Minecraft Universe"
+            image={mcu}
+            link="https://www.behance.net/gallery/70528301/Minecraft-Universe"
+            date={`${translation[_store.language].months.sep}, 2018`} />
+
           <Element
             title="Radium League Client"
             image={radium}

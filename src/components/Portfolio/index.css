@@ -6,40 +6,52 @@ section div.line {
 }
 
 section.portfolio .element {
-  width: 50%;
+  width: calc(25% - 50px);
   float: left;
-  margin: 20px 0;
+  margin: 20px 50px 40px 0;
 }
 
 section.portfolio .element img {
-  height: 200px;
+  width: 100%;
   float: left;
 }
 
 section.portfolio .element div.text {
   float: left;
-  height: 200px;
-  padding: 0 0 0 20px;
+  width: calc(100% - 40px);
+  border-top: 0;
+  padding: 15px 20px;
   position: relative;
+  background: #fff;
 }
 
 section.portfolio .element div.text p {
   margin: 0;
+  color: #333;
 }
 
 section.portfolio .element div.text p.title {
-  font-size: 24px;
+  font-size: 19px;
 }
 
 section.portfolio .element div.text p.subtext {
   opacity: .7;
+  font-size: 16px;
 }
 
-section.portfolio .element div.text a {
+section.portfolio .element div.text a svg {
   position: absolute;
+  top: 0;
   bottom: 0;
-  left: 20px;
-  min-width: 175px;
+  right: 20px;
+  height: 79px;
+  width: 34px;
+  fill: #333;
+}
+
+section.portfolio .element div.text a:hover svg,
+section.portfolio .element div.text a:active svg {
+  fill: #717171;
 }
 
 section.portfolio div.contact {
@@ -52,28 +64,11 @@ section.portfolio div.contact {
 @media (max-width: 768px) {
   section.portfolio .element {
     width: 100%;
-    margin: 0 0 60px;
-  }
-
-  section.portfolio .element img {
-    max-width: 100%;
-  }
-
-  section.portfolio .element div.text {
-    height: auto;
-    width: 100%;
-    padding: 10px 0 0;
-  }
-
-  section.portfolio .element div.text a {
-    position: initial;
-    width: calc(100% - 60px);
-    margin: 10px 0 0;
-    min-width: unset;
+    margin: 0 0 30px;
   }
 
   section.portfolio div.contact a {
     width: calc(100% - 60px);
-    margin: 0 0 10px;
+    margin: 0 0 15px;
   }
 }
