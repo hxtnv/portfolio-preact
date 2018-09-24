@@ -1,12 +1,12 @@
 import { h, Component } from 'preact';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Home from './components/Home';
-import Contact from './components/Contact';
-import Portfolio from './components/Portfolio';
+import Home from './Home';
+import Contact from './Contact';
+import Portfolio from './Portfolio';
 
-import _store from './services/store';
-import translation from './translation';
+import _store from './../services/store';
+import translation from './../translation';
 
 class Routes extends Component {
   constructor(props) {

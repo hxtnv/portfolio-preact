@@ -1,8 +1,8 @@
 import { h, Component } from 'preact';
 
-import Button from './../Button';
-import Background from './../Background';
-import Languages from './../Languages';
+import Button from './../../components/Button';
+import Background from './Background';
+import Languages from './../../components/Languages';
 
 import _store from '../../services/store';
 import translation from '../../translation';

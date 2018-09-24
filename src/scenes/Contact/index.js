@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 
-import HomeButton from './../HomeButton';
+import HomeButton from './../../components/HomeButton';
 
 import _store from '../../services/store';
 import translation from '../../translation';

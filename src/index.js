@@ -1,7 +1,7 @@
 import { h, render } from 'preact';
 import registerServiceWorker from './registerServiceWorker';
 
-import Routes from './Routes';
+import Routes from './scenes/Routes';
 
 import './index.css';
 

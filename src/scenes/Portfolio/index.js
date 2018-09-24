@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 
-import HomeButton from './../HomeButton';
-import Button from './../Button';
+import HomeButton from './../../components/HomeButton';
+import Button from './../../components/Button';
 
 import _store from '../../services/store';
 import translation from '../../translation';
