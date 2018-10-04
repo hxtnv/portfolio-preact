@@ -27,8 +27,8 @@ class Element extends Component {
         </div>
 
         <div className="text">
-          <p className="title">{this.props.title}</p>
-          <p className="subtext">{this.props.date}</p>
+          <p className="title" title={this.props.title}>{this.props.title}</p>
+          <p className="subtext" title={this.props.date}>{this.props.date}</p>
 
           <a href={this.props.link} target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
