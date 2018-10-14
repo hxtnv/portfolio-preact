@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@just-boris/preact-scripts": "1.1.4",
-    "gh-pages": "^2.0.1",
     "preact": "^8.2.9",
     "preact-compat": "^3.18.0",
     "react-easy-state": "^5.0.1",
