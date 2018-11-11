@@ -56,7 +56,7 @@ class Portfolio extends Component {
           <Element
             title="Minecraft Universe"
             image={mcu}
-            link="https://www.behance.net/gallery/70528301/Minecraft-Universe"
+            link="https://sv.mcuniverse.pl/"
             date={`${translation[_store.language].months.sep}, 2018`} />
 
           <Element
