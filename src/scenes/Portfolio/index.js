@@ -15,6 +15,7 @@ import venus from '../../resources/venusgg.jpg';
 import codeit from '../../resources/codeit.png';
 import esp from '../../resources/esportpoints_full.jpg';
 import dota2 from '../../resources/dota2auctions_full.jpg';
+import tlp from '../../resources/tlp_preview.png';
 
 class Element extends Component {
   render() {
@@ -53,6 +54,12 @@ class Portfolio extends Component {
         <div className="line"></div>
 
         <div style={{width: '100%', float: 'left'}}>
+          <Element
+            title="Translation office website"
+            image={tlp}
+            link="https://tlumacz-litewskiego.pl"
+            date={`${translation[_store.language].months.jan}, 2019`} />
+
           <Element
             title="Minecraft Universe"
             image={mcu}
