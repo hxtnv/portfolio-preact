@@ -1,71 +1,47 @@
 section.contact .holder {
-  width: 50%;
-  float: left;
-}
-
-section.contact .form-50 {
-  width: calc(50% - 50px);
-  float: left;
-  padding: 0 50px 0 0;
-}
-
-section.contact .form-100 {
   width: 100%;
   float: left;
 }
 
-section.contact input[type="text"],
-section.contact input[type="email"],
-section.contact textarea {
+section.contact .holder .block {
   border: 1px solid rgba(255, 255, 255, .2);
   background: transparent;
   outline: 0;
-  padding: 10px;
+  padding: 25px 70px;
   color: #fff;
+  /*display: inline-block;*/
+  float: left;
+  margin: 20px 20px 0 0;
+  text-align: center;
 }
 
-section.contact input[type="text"],
-section.contact input[type="email"] {
-  width: 100%;
-  margin: 0 0 20px;
+section.contact .holder .block:hover {
+  border: 1px solid rgba(255, 255, 255, .8);
 }
 
-section.contact textarea {
-  width: calc(100% - 50px);
-  min-height: 180px;
-  resize: vertical;
+section.contact .holder .block:hover p {
+  color: #eee;
 }
 
-section.contact label {
-  font-size: 14px;
+section.contact .holder .block svg {
+  height: 40px;
 }
 
-section.contact label:after {
-  content: ' *';
-  color: #ff0000;
-  font-size: 11px;
+section.contact .holder .block svg * {
+  fill: #eee;
 }
 
-section.contact input[type="submit"] {
-  font-size: 14px;
-  margin: 10px 0 0;
+section.contact .holder .block p {
+  font-size: 15px;
+  color: #b9b9b9;
+  margin: 15px 0 0;
 }
+
 
 @media (max-width: 768px) {
-  section.contact .form-50,
-  section.contact .holder,
-  section.contact textarea,
-  section.contact input[type="submit"] {
+  section.contact .holder .block {
     width: 100%;
-  }
-
-  section.contact .form-50 {
-    padding: 0;
-  }
-
-  section.contact input[type="text"],
-  section.contact input[type="email"],
-  section.contact textarea {
-    width: calc(100% - 20px);
+    margin: 20px 0 0;
+    padding: 25px 0;
   }
 }
