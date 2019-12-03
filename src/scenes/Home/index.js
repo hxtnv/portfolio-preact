@@ -32,19 +32,6 @@ class Home extends Component {
         <h1>Daniel Wygoński</h1>
         <h2>UI / UX Designer, Web Developer</h2>
 
-        <p className="text-muted">{translation[_store.language].home_desc1}</p>
-        <p className="text-muted">
-          <span dangerouslySetInnerHTML={{__html: translation[_store.language].home_desc2}}></span>
-
-          <a className="toggle-more" role="button" onClick={() => this.toggleMore()}>
-            {!this.state.more ? translation[_store.language].home_read_more : translation[_store.language].home_hide_text}
-          </a>
-
-          <p className={`text-more ${!this.state.more ? 'hidden' : ''}`}>
-            {this.state.more ? <span dangerouslySetInnerHTML={{__html: translation[_store.language].home_spec}}></span> : '.'}
-          </p>
-        </p>
-
         <Button to="/kontakt">{translation[_store.language].contact}</Button>
         <Button to="/portfolio">{translation[_store.language].portfolio}</Button>
 
