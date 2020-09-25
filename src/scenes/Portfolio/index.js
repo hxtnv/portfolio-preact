@@ -20,8 +20,9 @@ import czarpln from '../../resources/czarpln.png';
 
 class Element extends Component {
   render() {
+    console.log(this.props);
     return (
-      <div className="element" style={this.props.style || null}>
+      <div className="element" style={{float: this.props.revert ? 'revert' : null}}>
         <div className="img">
           <a href={this.props.link} target="_blank">
             <img src={this.props.image} alt={this.props.title} />
@@ -104,7 +105,7 @@ class Portfolio extends Component {
             date={`${translation[_store.language].months.jan}, 2018`} />
 
           <Element
-            style={{float: 'revert !important'}}
+            revert
             title="esportpoints.com"
             image={esp}
             link="http://esportpoints.com"
