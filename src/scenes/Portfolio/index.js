@@ -104,7 +104,7 @@ class Portfolio extends Component {
             date={`${translation[_store.language].months.jan}, 2018`} />
 
           <Element
-            style={{float: 'reverse'}}
+            style={{float: 'revert !important'}}
             title="esportpoints.com"
             image={esp}
             link="http://esportpoints.com"
