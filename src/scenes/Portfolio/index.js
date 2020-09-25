@@ -16,6 +16,7 @@ import codeit from '../../resources/codeit.png';
 import esp from '../../resources/esportpoints_full.jpg';
 import dota2 from '../../resources/dota2auctions_full.jpg';
 import tlp from '../../resources/tlp_preview.png';
+import czarpln from '../../resources/czarpln.png';
 
 class Element extends Component {
   render() {
@@ -54,6 +55,12 @@ class Portfolio extends Component {
         <div className="line"></div>
 
         <div style={{width: '100%', float: 'left'}}>
+          <Element
+            title="Restaurant website"
+            image={czarpln}
+            link="http://czar-polnocy.pl"
+            date={`${translation[_store.language].months.aug}, 2020`} />
+
           <Element
             title="Translation office website"
             image={tlp}
