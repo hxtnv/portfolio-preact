@@ -9,6 +9,7 @@ class Button extends Component {
         className={`${styles.btn} ${this.props.disabled ? styles.disabled : ''} ${this.props.primary ? styles.primary : ''} ${this.props.block ? styles.block : ''}`}
         onClick={!this.props.disabled ? this.props.onClick || null : null}
         style={this.props.style || null}
+        type={this.props.submit ? 'submit' : null}
       >
         {this.props.children}
       </button>

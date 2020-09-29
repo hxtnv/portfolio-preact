@@ -43,7 +43,7 @@ class Contact extends Component {
         <h3>Contact</h3>
 
         <div className={styles.container}>
-          <form data-netlify="true" onSubmit={this.handleSubmit}>
+          <form name="contact" method="POST" data-netlify="true">
             <label>Your name</label>
             <input type="text" required placeholder="John Doe" name="name" value={name} onChange={this.handleChange} />
 
@@ -53,7 +53,7 @@ class Contact extends Component {
             <label>Your message</label>
             <textarea required placeholder="Message goes here" name="message" value={message} onChange={this.handleChange}></textarea>
 
-            <Button block primary disabled={this.state.isDisabled}>Send now</Button>
+            <Button block primary submit disabled={this.state.isDisabled}>Send now</Button>
           </form>
         </div>
       </section>
