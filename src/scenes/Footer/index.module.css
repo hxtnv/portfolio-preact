@@ -1,0 +1,50 @@
+footer {
+  padding: 10px 9.36%;
+  width: 81.28%;
+  margin: 70px 0 0;
+  background: var(--secondary-bg-color);
+  float: left;
+}
+
+footer p {
+  margin: 0;
+  float: left;
+}
+
+.icons {
+  float: right;
+}
+
+.icons a {
+  margin: 0 10px;
+}
+
+.icons svg path {
+  fill: #fff;
+  opacity: .9;
+}
+
+.icons a:hover {
+  opacity: .5;
+}
+
+.icons,
+.icons a,
+.icons a svg {
+  height: 25px;
+}
+
+
+@media (max-width: 768px) {
+  footer p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .icons {
+    float: left;
+    width: 100%;
+    margin: 5px 0 0;
+    text-align: center;
+  }
+}

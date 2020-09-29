@@ -1,0 +1,78 @@
+.portfolio {
+  padding: 40px 9.36%;
+}
+
+.portfolio h3 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 0 0 50px;
+}
+
+.element {
+  width: 30%;
+  display: inline-block;
+  margin: 0 0 30px;
+}
+
+.element.mid {
+  margin: 0 5% 30px;
+}
+
+.element img {
+  width: 100%;
+  /*height: calc(100% * 0.5610);*/
+  float: left;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.element .card {
+  background: #fff;
+  color: #15151D;
+  float: left;
+  padding: 10px 15px;
+  width: calc(100% - 30px);
+  position: relative;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.element .card p {
+  margin: 0;
+  max-width: calc(100% - 25px);
+}
+
+.element .card p.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.element .card p.date {
+  font-size: 16px;
+  color: #606064;
+  margin: -3px 0 0;
+}
+
+.element .card svg {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+}
+
+.element .card svg:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 40px 20px;
+    width: calc(100% - 40px);
+  }
+
+  .element {
+    width: 100%;
+    margin: 0 0 30px !important;
+  }
+}

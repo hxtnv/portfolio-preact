@@ -1,43 +1,97 @@
-import { h, Component } from 'preact';
+import React, { Component } from 'react';
 
-import HomeButton from './../../components/HomeButton';
-import Button from './../../components/Button';
+import esportpoints from './resources/esportpoints.jpg';
+import codeit from './resources/codeit.jpg';
+import venus from './resources/venus.jpg';
+import radium from './resources/radium.jpg';
+import mcu from './resources/mcu.jpg';
+import tlp from './resources/tlp.jpg';
+import radiumhud from './resources/radiumhud.jpg';
+import nrm from './resources/nrm.jpg';
+import czp from './resources/czp.jpg';
 
-import _store from '../../services/store';
-import translation from '../../translation';
+import styles from './index.module.css';
 
-import './index.css';
+let ChevronRight = () => {
+  return (
+    <svg width="11" height="19" viewBox="0 0 11 19" fill="none">
+      <path d="M0 1.814L1.814 0L10.884 9.07L1.814 18.14L0 16.326L7.256 9.07L0 1.814Z" fill="#15151D" />
+    </svg>
+  );
+}
 
-import mcu from '../../resources/mcu.jpg';
-import radium from '../../resources/radium.png';
-import tag from '../../resources/tag.jpg';
-import venus from '../../resources/venusgg.jpg';
-import codeit from '../../resources/codeit.png';
-import esp from '../../resources/esportpoints_full.jpg';
-import dota2 from '../../resources/dota2auctions_full.jpg';
-import tlp from '../../resources/tlp_preview.png';
-import czarpln from '../../resources/czarpln.png';
+const items = [
+  {
+    name: 'Restaurant',
+    date: 'August 2020',
+    img: czp,
+    link: 'http://czar-polnocy.pl/'
+  },
+  {
+    name: 'Real Estate Agency',
+    date: 'September 2019',
+    img: nrm,
+    link: 'https://www.behance.net/gallery/86183213/Real-Estate-Agency-Website'
+  },
+  {
+    name: 'Olympus League In-game HUD',
+    date: 'March 2019',
+    img: radiumhud,
+    link: 'https://www.behance.net/gallery/77954843/Olympus-CSGO-In-Game-HUD-UI-Design'
+  },
+  {
+    name: 'Olympus League Client',
+    date: 'March 2019',
+    img: radium,
+    link: 'https://www.behance.net/gallery/77360545/Olympus-Client-UI-Design'
+  },
+  {
+    name: 'Translation office',
+    date: 'January 2019',
+    img: tlp,
+    link: 'https://tlumacz-litewskiego.pl'
+  },
+  {
+    name: 'Minecraft Universe',
+    date: 'September 2018',
+    img: mcu,
+    link: 'https://www.behance.net/gallery/70528301/Minecraft-Universe'
+  },
+  {
+    name: 'Coding Academy',
+    date: 'April 2018',
+    img: codeit,
+    link: 'https://www.behance.net/gallery/67900799/Coding-Academy-Website'
+  },
+  {
+    name: 'venus.gg',
+    date: 'February 2018',
+    img: venus,
+    link: 'https://www.behance.net/gallery/62234093/venusgg-esport-bets'
+  },
+  {
+    name: 'esportpoints.com',
+    date: 'March 2017',
+    img: esportpoints,
+    link: '/img/esportpoints_full.jpg'
+  },
+
+];
 
 class Element extends Component {
   render() {
-    console.log(this.props);
     return (
-      <div className="element" style={{float: this.props.revert ? 'revert' : null}}>
-        <div className="img">
-          <a href={this.props.link} target="_blank">
-            <img src={this.props.image} alt={this.props.title} />
-          </a>
-        </div>
+      <div className={`${styles.element} ${this.props.mid ? styles.mid : ''}`}>
+        <a href={this.props.link} target="_blank" rel="noopener noreferrer">
+          <img src={this.props.img} alt={this.props.name} />
+        </a>
 
-        <div className="text">
-          <p className="title" title={this.props.title}>{this.props.title}</p>
-          <p className="subtext" title={this.props.date}>{this.props.date}</p>
+        <div className={styles.card}>
+          <p className={styles.title}>{this.props.name}</p>
+          <p className={styles.date}>{this.props.date}</p>
 
-          <a href={this.props.link} target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-              <path d="M0 0h24v24H0z" fill="none"/>
-            </svg>
+          <a href={this.props.link} target="_blank" rel="noopener noreferrer">
+            <ChevronRight />
           </a>
         </div>
       </div>
@@ -46,74 +100,33 @@ class Element extends Component {
 }
 
 class Portfolio extends Component {
+  constructor(props) {
+    super(props);
+
+    this.portfolioRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this.props.setPortfolioHeight(this.portfolioRef.current.offsetHeight)
+
+    this.tmt = setTimeout(() => this.props.setPortfolioHeight(this.portfolioRef.current.offsetHeight), 1000);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.tmt);
+    this.tmt = null;
+  }
+
   render() {
     return (
-      <section className="portfolio">
-        <HomeButton />
+      <section className={styles.portfolio} ref={this.portfolioRef}>
+        <h3>My previous work</h3>
 
-        <h2>{translation[_store.language].portfolio_prev}</h2>
+        <div className={styles.container}>
+          {items.map((i, key) =>
+            <Element setElementWidth={this.setElementWidth} {...i} key={key} mid={key === 1 || key === 4 || key === 7 || key === 10 || key === 13 || key === 16 || key === 19 || key === 22} />
+          )}
 
-        <div className="line"></div>
-
-        <div style={{width: '100%', float: 'left'}}>
-          <Element
-            title="Restaurant website"
-            image={czarpln}
-            link="http://czar-polnocy.pl"
-            date={`${translation[_store.language].months.aug}, 2020`} />
-
-          <Element
-            title="Translation office website"
-            image={tlp}
-            link="https://tlumacz-litewskiego.pl"
-            date={`${translation[_store.language].months.jan}, 2019`} />
-
-          <Element
-            title="Minecraft Universe"
-            image={mcu}
-            link="https://sv.mcuniverse.pl/"
-            date={`${translation[_store.language].months.sep}, 2018`} />
-
-          <Element
-            title="Radium League Client"
-            image={radium}
-            link="http://radium.elhs.co"
-            date={`${translation[_store.language].months.jun}, 2018`} />
-
-          <Element
-            title="venus.gg"
-            image={venus}
-            link="https://www.behance.net/gallery/62234093/venusgg-esport-bets"
-            date={`${translation[_store.language].months.feb}, 2018`} />
-
-          <Element
-            title="TagAnimationz Portfolio"
-            image={tag}
-            link="https://www.behance.net/gallery/62558235/TagAnimationzcom"
-            date={`${translation[_store.language].months.feb}, 2018`} />
-
-          <Element
-            title="Akademia Programowania"
-            image={codeit}
-            link="http://codeit.edu.pl"
-            date={`${translation[_store.language].months.apr}, 2018`} />
-
-          <Element
-            title="dota2auctions.com"
-            image={dota2}
-            link="http://dota2auctions.com"
-            date={`${translation[_store.language].months.jan}, 2018`} />
-
-          <Element
-            revert
-            title="esportpoints.com"
-            image={esp}
-            link="http://esportpoints.com"
-            date={`${translation[_store.language].months.mar}, 2017`} />
-        </div>
-
-        <div className="contact">
-          <Button to="/kontakt">{translation[_store.language].contact}</Button>
         </div>
       </section>
     );

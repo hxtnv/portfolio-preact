@@ -1,0 +1,45 @@
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 9.36%;
+  width: 81.28%;
+}
+
+.nav img {
+  float: left;
+  transition: opacity .3s;
+}
+
+.nav img:hover {
+  opacity: .75;
+  cursor: pointer;
+}
+
+.nav ul {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  margin: 0 10px;
+}
+
+.nav ul button {
+  transition: opacity .3s;
+  line-height: 34px;
+}
+
+.nav ul button:hover {
+  cursor: pointer;
+  opacity: .65;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: initial;
+  }
+}

@@ -1,0 +1,46 @@
+.contact {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact h3 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 0 0 50px;
+}
+
+.contact label {
+  margin: 0 0 3px;
+  display: block;
+}
+
+.contact input,
+.contact textarea {
+  background: var(--secondary-bg-color);
+  border: 0;
+  outline: 0;
+  padding: 10px 15px;
+  width: calc(100% - 30px);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-size: 16px;
+  margin: 0 0 20px;
+  border-radius: 5px;
+}
+
+.contact textarea {
+  resize: vertical;
+  min-height: 240px;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    width: calc(100% - 40px);
+    padding: 0 20px;
+  }
+
+  .contact textarea {
+    min-height: 200px;
+  }
+}
