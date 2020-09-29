@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-snapshot';
 
 import * as serviceWorker from './serviceWorker';
 
@@ -8,7 +8,7 @@ import Index from './scenes/Index';
 import './variables.css';
 import './index.css';
 
-ReactDOM.render(
+render(
   <React.StrictMode>
     <Index />
   </React.StrictMode>,

@@ -43,7 +43,9 @@ class Contact extends Component {
         <h3>Contact</h3>
 
         <div className={styles.container}>
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" method="POST" data-netlify="true" onSubmit={this.handleSubmit}>
+            <input type="hidden" name="form-name" value="contact" />
+            
             <label>Your name</label>
             <input type="text" required placeholder="John Doe" name="name" value={name} onChange={this.handleChange} />
 
