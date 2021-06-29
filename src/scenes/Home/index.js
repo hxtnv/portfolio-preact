@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { animateScroll as scroll } from "react-scroll";
 
 import Button from '../../components/Button';
 import Navbar from './components/Navbar';
@@ -24,10 +25,7 @@ class Home extends Component {
   }
 
   scrollTo(y) {
-    window.scroll({
-      top: y,
-      behavior: 'smooth'
-    });
+    scroll.scrollTo(y);
   }
 
   render() {

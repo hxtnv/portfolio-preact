@@ -47,6 +47,12 @@
 
   .centered {
     padding: 80px 0 0;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+
+  .centered .btns button {
+    width: 100%;
   }
 
   .centered h4 {
